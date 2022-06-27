@@ -10,15 +10,16 @@ function CardContainer() {
 
     return (
         <Grid container
-         justifyContent="center"
-            alignItems="center" > 
+            justifyContent="center"
+            alignItems="center"  >
             {albums.map(album => {
                 return (
                     <Grid item sx={{ m: 1 }}>
-                        <Card align='center' sx={{ minWidth: 275 }} >
+                        <Card align='center' sx={{ background:'#f2f2f2' , width: 275 , height: 200 }} >
                             <CardContent>
                                 <Typography  >{album.collectionCensoredName}</Typography>
                                 <img alt={album.c} src={album.artworkUrl100}></img>
+
                                 <Typography > by: {album.artistName}</Typography>
                             </CardContent>
                         </Card>
